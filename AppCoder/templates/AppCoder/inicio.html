@@ -4,9 +4,13 @@
 
 {% block contenidoQueCambia %}
 
+        <div class="text-center">
+            <img height="40px" src="{{url}}" >
+            <h3>Que bueno verte {{user.username}}</h3>
+        </div>
 
     <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
-    <h1>Este es el título del Inicio que cambio</h1>
+    <h1>{{mensaje}}</h1>
   
 
     <h3>Podes buscar una camada:</h3>
@@ -36,6 +40,13 @@
 
     </ul>
 
+    {% else %}
+    <p>No hay datos con esa descripción.</p>
+
     {% endif %}
+
+    <p style="color: red;">{{respuesta}}</p>
+ 
+   
 
 {% endblock %}

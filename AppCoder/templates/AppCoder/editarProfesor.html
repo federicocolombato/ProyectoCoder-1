@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends "AppCoder/padre.html" %}
 
 {% load static %}
@@ -30,3 +31,41 @@
   
 
 {% endblock %}
+=======
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>Formulario - Editar Profesor</h1>
+    
+    {% if miFormulario.errors %}
+
+    <p style="color: red;"> Están mal los datos, revisar</p>
+
+    {% endif %}
+
+
+    <form action="" method="POST">{% csrf_token %}
+
+        <!-- Acá está la magia de Django-->
+        
+        <table>
+
+            {{ miFormulario.as_table }}
+
+
+        </table>
+
+
+        <input type="submit", value="Enviar">
+
+    </form>
+
+  
+
+{% endblock %}
+>>>>>>> 6f38813aa924debd03b1cb79b656c2c30a76d1ba
